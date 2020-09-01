@@ -43,7 +43,7 @@ export default {
         order: "viewCount",
         maxResults: 12,
         q: "",
-        key: "AIzaSyBhNdWYtRRuYJVGVDcFhI9FuP4dUtANFH8",
+        key: "YOUTUBE_API",
         prevPageToken: "",
         nextPageToken: ""
       },
@@ -51,7 +51,7 @@ export default {
         baseUrl: "https://www.googleapis.com/youtube/v3/video?",
         part: ["snippet,contentDetails"],
         ids: [],
-        key: "AIzaSyBhNdWYtRRuYJVGVDcFhI9FuP4dUtANFH8"
+        key: "YOUTUBE_API"
       }
     };
   },
