@@ -1,7 +1,13 @@
 <template>
   <div>
-    <VideoResult />
-    <Pagination />
+    <VideoResult v-if="videos.length > 0" v-bind:videos="videos" />
+    <Pagination
+      v-if="videos.length > 0"
+      v-bind:prevPageToken="api.prevPageToken"
+      v-bind:nextPageToken="api.nextPageToken"
+      v-on:prev-page="prevPage"
+      v-on:next-page="nextPage" 
+    />
   </div>
 </template>
 
