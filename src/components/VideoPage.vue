@@ -1,6 +1,5 @@
 <template>
   <div class="test1">
-    <SearchForm v-on:search="search" />
     <VideoResult
       v-if="videos.length > 0"
       v-bind:videos="videosPage"
@@ -17,14 +16,12 @@
 </template>
 
 <script>
-import SearchForm from "./VideoPageComponents/SearchForm.vue";
 import VideoResult from "./VideoPageComponents/VideoResult.vue";
 import axios from "axios";
 
 export default {
   name: "VideoPage",
   components: {
-    SearchForm,
     VideoResult
   },
   data() {
