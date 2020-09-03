@@ -16,8 +16,6 @@
         {{ video.snippet.channelTitle }} |
         {{ video.snippet.publishedAt | formatDate }}
       </h6>
-      <!--<p class="card-duration">{{ video.contentDetails }}</p>-->
-      <button @click="test(video)">test</button>
       <p class="card-text">{{ video.snippet.description }}</p>
       <CollectionButton v-on:addInCollection="addInCollection(video)" />
     </div>
@@ -34,16 +32,13 @@ export default {
   },
   props: ["video"],
   methods: {
-    test(video) {
-      console.log(video);
-      //console.log(video.id.videoId);
-      //console.log(video.contentDetails.duration);
-    },
     addInCollection(video) {
-      console.log("in VideoGridItem");
-      //console.log(`video ID : ${video.id.videoId}`);
       this.$emit("addInCollection", video);
     }
   }
 };
 </script>
+
+<style scoped>
+
+</style>
